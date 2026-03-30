@@ -35,7 +35,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, AutoConfig
 import json
 import time
 import types
-import fast_dllm
+from model_registration import get_model_config_path
 import generation_functions
 
 def set_seed(seed):
@@ -78,6 +78,7 @@ class Fast_dLLM_v2EvalHarness(LM):
         
         self.model = AutoModelForCausalLM.from_pretrained(
             model_path,
+            config=get_model_config_path(model_path),
             torch_dtype=torch.bfloat16,
             **model_kwargs
         )

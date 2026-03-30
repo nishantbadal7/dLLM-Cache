@@ -6,7 +6,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import time
 import random
 import types
-import fast_dllm
+from model_registration import get_model_config_path
 from generation_functions import setup_model_with_custom_generation
 
 
@@ -33,6 +33,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 # Load Fast_dLLM model instance
 model_accelerated = AutoModelForCausalLM.from_pretrained(
     model_name,
+    config=get_model_config_path(model_name),
     torch_dtype="auto",
     device_map=device_accelerated,
 )

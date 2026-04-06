@@ -1,0 +1,16 @@
+{
+  "models": {
+    "Efficient-Large-Model/Fast_dLLM_v2_7B": {
+      "config_path": "../configs/model_config_7b.json",
+      "model_type": "Fast_dLLM_Qwen",
+      "config_class": "model.configuration.Fast_dLLM_QwenConfig",
+      "model_class": "model.modeling.Fast_dLLM_QwenForCausalLM"
+    },
+    "Efficient-Large-Model/Fast_dLLM_v2_1.5B": {
+      "config_path": "../configs/model_config_1_5b.json",
+      "model_type": "Fast_dLLM_Qwen",
+      "config_class": "model.configuration.Fast_dLLM_QwenConfig",
+      "model_class": "model.modeling.Fast_dLLM_QwenForCausalLM"
+    }
+  }
+}

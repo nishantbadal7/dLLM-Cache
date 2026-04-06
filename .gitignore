@@ -1,7 +1,9 @@
 .vscode/
+.venv/
 __pycache__/
 *.py[cod]
 *$py.class
+.pytest_cache/
 llada/output/
 llada/evals_results/
 dream/evals_results/
